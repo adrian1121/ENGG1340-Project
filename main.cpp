@@ -4,6 +4,7 @@
 #include <iomanip>
 
 using namespace std;
+//creating a structure that holds the essential details of the employer
 struct Employee{
     string name;
     string ID;
@@ -37,6 +38,8 @@ int main()
     string Status;
     string special_attribute;
 
+	//a vector with each position holding the different particulars of the employee
+
     vector<Employee> employees;
     int i=0,j=0;
     char choice = main_menu();
@@ -47,6 +50,8 @@ int main()
                 {
                     char number = selection_menu();
                     switch (number){
+// selection 1: gives us a search option to search amongst the entire database of employers.
+//find the correct employee using the ID input taken with in the case block
                         case'1':
                         {
                             char choice=employee_menu();
@@ -55,8 +60,7 @@ int main()
                                 int i;
 
                                 switch (choice){
-// selection 1: gives us a search option to search amongst the entire database of employers.
-//find the correct employee using the ID input taken with in the case block
+
                                     case'1':
                                         {
                                             string id;
@@ -150,6 +154,8 @@ int main()
                             }
                         break;
                         }
+//This is for the choice 2 for deletion of employee details
+//The employee details are removed from the vector
                         case'2':
                             {
                                 string nameorid;
@@ -166,6 +172,8 @@ int main()
                                 break;
 
                             }
+//The 3rd option helps in editing the particulars of an employee
+//The id is used to access a particular cell of the vector and make the respective changes
                         case'3':
                             {
                                 string nameorid;
@@ -182,6 +190,8 @@ int main()
                                 break;
 
                              }
+//The case 4 creates a new employee details
+//A new vector space is created to store thge new employee details in the database
                         case'4':
                             cout<<"Name: ";
                             cin>>Name;
@@ -207,6 +217,7 @@ int main()
                             employees[j].status="Active";
                             j=j+1;
                             break;
+//This case block is used to fire an employee from his postion by updating his status in the company
                         case'5':
                             {
                                 string nameorid;
@@ -220,6 +231,7 @@ int main()
                                 }
                                 break;
                             }
+//This redirects back to the options meny and the different choices can then be accesed accordingly
                         case'6':
                             {
                              char choice=show_menu();
@@ -364,7 +376,7 @@ char selection_menu()
 	cout << "0.Quit. " << endl;
 	cout << "Please enter your choice: ";
 
-	// Bsed on the use input the function return the choice to perform the required tasks accordingly.
+	// Based on the use input the function return the choice to perform the required tasks accordingly.
 	cin >> choice;
 	cout << endl;
 
@@ -423,7 +435,7 @@ char main_menu()
 	char choice;
 
 	// print selection menu
-	cout << "********************************" << endl;
+	cout << "********************************"<< endl;
 	cout << "* Welcome *" << endl;
 	cout << "********************************" << endl;
 	cout << "1. Menu" << endl;
