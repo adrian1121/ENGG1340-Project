@@ -222,19 +222,122 @@ int main()
                             }
                         case'6':
                             {
-                                cout<<"Total employees: "<<employees.size()<<endl;
-                                printheading();
-                                for(i=0;i<employees.size();++i){
-                                    cout<<i+1<<".";
-                                    printemployees(employees[i]);
-                                    cout<<endl;
-                                }
-                                break;
-                            }
+                             char choice=show_menu();
+                             while (choice!='0'){
+                                int i;
+                                switch (choice){
+                                    case'1':
+                                        {
+                                            for(i=0;i<employees.size()-1;i++){
+                                                for(int k=i;k<employees.size()-1;k++){
+                                                    sort(employees.begin(), employees.end(), compareID);
+                                                }
+                                            }
+                                            cout<<"Total employees: "<<employees.size()<<endl;
+                                            printheading();
+                                            for(i=0;i<employees.size();++i){
+                                                cout<<i+1<<".";
+                                                printemployees(employees[i]);
+                                                cout<<endl;
+                                            }
+                                            break;
+                                        }
+                                    case'2':
+                                        {
+                                            for(i=0;i<employees.size()-1;i++){
+                                                for(int k=i;k<employees.size()-1;k++){
+                                                    sort(employees.begin(), employees.end(), comparename);
+                                                }
+                                            }
+                                            cout<<"Total employees: "<<employees.size()<<endl;
+                                            printheading();
+                                            for(i=0;i<employees.size();++i){
+                                                cout<<i+1<<".";
+                                                printemployees(employees[i]);
+                                                cout<<endl;
+                                            }
+                                            break;
+                                        }
+                                    case'3':
+                                        {
+                                            for(i=0;i<employees.size()-1;i++){
+                                                for(int k=i;k<employees.size()-1;k++){
+                                                    sort(employees.begin(), employees.end(), compareage);
+                                                }
+                                            }
+                                            cout<<"Total employees: "<<employees.size()<<endl;
+                                            printheading();
+                                            for(i=0;i<employees.size();++i){
+                                                cout<<i+1<<".";
+                                                printemployees(employees[i]);
+                                                cout<<endl;
+                                            }
+                                            break;
+                                        }
+                                    case'4':
+                                        {
+                                            for(i=0;i<employees.size()-1;i++){
+                                                for(int k=i;k<employees.size()-1;k++){
+                                                    sort(employees.begin(), employees.end(), comparerole);
+                                                }
+                                            }
+                                            cout<<"Total employees: "<<employees.size()<<endl;
+                                            printheading();
+                                            for(i=0;i<employees.size();++i){
+                                                cout<<i+1<<".";
+                                                printemployees(employees[i]);
+                                                cout<<endl;
+                                            }
+                                            break;
+                                        }
+                                    case'5':
+                                        {
+                                            for(i=0;i<employees.size()-1;i++){
+                                                for(int k=i;k<employees.size()-1;k++){
+                                                    sort(employees.begin(), employees.end(), comparesalary);
+                                                }
+                                            }
+                                            cout<<"Total employees: "<<employees.size()<<endl;
+                                            printheading();
+                                            for(i=0;i<employees.size();++i){
+                                                cout<<i+1<<".";
+                                                printemployees(employees[i]);
+                                                cout<<endl;
+                                            }
+                                            break;
+                                        }
+                                    case '6':
+                                        {
+                                            for(i=0;i<employees.size()-1;i++){
+                                                for(int k=i;k<employees.size()-1;k++){
+                                                    sort(employees.begin(), employees.end(), comparesalary);
+                                                }
+                                            }
+                                            cout<<"Total employees: "<<employees.size()<<endl;
+                                            printheading();
+                                            for(i=0;i<employees.size();++i){
+                                                cout<<i+1<<".";
+                                                printemployees(employees[i]);
+                                                cout<<endl;
+                                            }
+                                            break;
+                                        }
+                                    default:
+                                        cout << "Invalid input!" << endl;
 
-                    }
-                break;
-                }
+                                }
+                                choice=show_menu();
+                             }
+                            break;
+                            }
+			case'7':
+                            {
+                                check=false;
+                            }
+                        default:
+                            {
+                                cout<<"invalid input!"<<endl;
+                            }   
             case'2':
                 cout<<"yea"<<endl;
                 break;
