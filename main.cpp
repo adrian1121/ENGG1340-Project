@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+
 using namespace std;
 struct Employee{
     string name;
@@ -54,7 +55,7 @@ int main()
                                 int i;
 
                                 switch (choice){
-
+// selection 1: gives us a search option to search amongst the entire database of employers and find the correct employee using the ID input taken with in the case block
                                     case'1':
                                         {
                                             string id;
@@ -246,7 +247,7 @@ char selection_menu()
 {
 	char choice;
 
-	// print selection menu
+	// The welcome menu is printed providing the various options that can be executed.
 	cout << "********************************" << endl;
 	cout << "* Welcome to Staff Manager *" << endl;
 	cout << "********************************" << endl;
@@ -259,7 +260,7 @@ char selection_menu()
 	cout << "0.Quit. " << endl;
 	cout << "Please enter your choice: ";
 
-	// read user selection
+	// Bsed on the use input the function return the choice to perform the required tasks accordingly.
 	cin >> choice;
 	cout << endl;
 
