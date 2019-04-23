@@ -55,7 +55,8 @@ int main()
                                 int i;
 
                                 switch (choice){
-// selection 1: gives us a search option to search amongst the entire database of employers and find the correct employee using the ID input taken with in the case block
+// selection 1: gives us a search option to search amongst the entire database of employers.
+//find the correct employee using the ID input taken with in the case block
                                     case'1':
                                         {
                                             string id;
@@ -414,3 +415,60 @@ void editprofile(Employee employees){
         element=edit_menu();
     }
 }
+
+
+void rating()
+{
+    for(int i =0;i<1000;i++)
+    {
+        if(total_time[i] >= 18600)
+        {
+            employees[i].rating = 10;
+            employees[i].salary + = 10000;
+        }
+        if(total_time[i] <18600 && total_time[i] >=16740)
+        {
+            employees[i].rating = 9;
+            employees[i].salary + = 9000;
+        }
+        if(total_time[i] <16700 && total_time[i] >=14880)
+        {
+            employees[i].rating = 8;
+            employees[i].salary + = 8000;
+        }
+        if(total_time[i] <14880 && total_time[i] >=13020)
+        {
+            employees[i].rating = 7;
+            employees[i].salary + = 7000;
+        }
+        if(total_time[i] < 13020 && total_time[i] >=11160)
+        {
+            employees[i].rating = 6;
+            employees[i].salary + = 6000;
+        }
+	    if(total_time[i] <11160 && total_time[i] >=9300)
+        {
+            employees[i].rating = 5;
+            employees[i].salary + = 5000;
+        }
+	    if(total_time[i] <9300 && total_time[i] >=7440)
+        {
+            employees[i].rating = 4;
+            employees[i].salary + = 4000;
+        }
+	    if(total_time[i] <7440 && total_time[i] >=5580)
+        {
+            employees[i].rating = 3;
+            employees[i].salary + = 3000;
+        }
+	    if(total_time[i] <5580 && total_time[i] >=3720)
+        {
+            employees[i].rating = 2;
+            employees[i].salary + = 2000;
+        }
+	    if(total_time[i] <3720 )
+        {
+            employees[i].rating = 1;
+            employees[i].salary + = 1000;
+        }
+	    
