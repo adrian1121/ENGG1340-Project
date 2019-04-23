@@ -472,3 +472,86 @@ void rating()
             employees[i].salary + = 1000;
         }
 	    
+	    
+int total_time[1000];
+void timing_entry(Employee);
+void Total_time(vector<Employee> employees)
+{
+    int check_in_hour;
+    int check_out_hour;
+    int check_in_minutes;
+    int check_out_minutes;
+    int diff_minutes;
+    int total_time_raw;
+    
+    
+    for(int i =0;i < 1000;i++){
+        for(int j=0;j<31;j++)
+        {
+          check_in_hour= stoi((employees[i].checkin[j]).substr(0,1));
+		
+          check_out_hour= stoi((employees[i].checkout[j]).substr(0,1));
+		
+          check_in_minutes= stoi((employees[i].checkin[j]).substr(3,4));
+		
+          check_out_minutes=stoi((employees[i].checkout[j]).substr(3,4));
+           if (check_in_minutes > check_out_minutes)
+           {
+               diff_minutes= check_in_minutes - check_out_minutes;
+           }
+           else if (check_in_minutes < check_out_minutes)
+           {
+              diff_minutes= check_out_minutes - check_in_minutes; 
+           }
+           
+           
+         total_time_raw=((check_out_hour-check_in_hour)*60) + diff_minutes;
+           
+        }
+        total_time[i]= total_time_raw;
+    }
+}
+
+}
+void timing_entry(Employee employees)
+{
+    string check_in_time;
+    string check_out_time;
+    
+    for(int j=0; j<31;j++)
+    { 
+        cout << "Please enter day "  << j+1 <<" check in time (HH:MM)"<< endl;
+        cin >> check_in_time;
+        cout << "Please enter day "  << j+1 <<" check out time"<< endl;
+        cin >> check_out_time;
+        
+        employees.checkin[j]=check_in_time;
+        employees.checkout[j]=check_out_time;
+        
+    }
+    
+}
+
+
+
+
+void rating(vector<Employee>employees)
+{
+    int max=employees[0].total_time;
+    int Bestemployee;
+    for(int i=0; i<999; i++)
+    {
+        for(int j=i+1; j<1000; j++)
+        {
+            //If there is a smaller element found on right of the array then swap it.
+            if(max < total_time[i])
+            {
+                max = total_time[i];
+                Bestemployee=i;
+            }
+        }
+    }
+    
+    
+}
+	    
