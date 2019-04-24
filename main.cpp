@@ -3,6 +3,46 @@
 #include <vector>
 #include <iomanip>
 
+using namespace std;
+//creating a structure that holds the essential details of the employer
+struct Employee{
+    string name;
+    string ID;
+    int age;
+    string role;
+    double salary;
+    string checkin[31];
+    string checkout[31];
+    double rating;
+    string status;
+    string attribute;
+};
+
+//declaring a constant variable to fix the employee database to 1000
+const int MAX_NUM_EMPLOYEES = 1000;
+//function calling
+char selection_menu();
+char employee_menu();
+char main_menu();
+char edit_menu();
+void printheading();
+void printemployees(Employee );
+void editprofile(Employee );
+int main()
+{
+//Variable declaration of attributes
+    string Name;
+    string id;
+    int Age;
+    string Role;
+    double Salary;
+    string Checkin[31];
+    string Checkout[31];
+    double Rating;
+    string Status;
+    string special_attribute;
+
+
 
 //a vector with each position holding the different particulars of the employee
 
