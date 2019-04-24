@@ -17,7 +17,10 @@ struct Employee{
     string status;
     string attribute;
 };
+
+//declaring a constant variable to fix the employee database to 1000
 const int MAX_NUM_EMPLOYEES = 1000;
+//function calling
 char selection_menu();
 char employee_menu();
 char main_menu();
@@ -27,6 +30,7 @@ void printemployees(Employee );
 void editprofile(Employee );
 int main()
 {
+//Variable declaration of attributes
     string Name;
     string id;
     int Age;
@@ -38,7 +42,7 @@ int main()
     string Status;
     string special_attribute;
 
-	//a vector with each position holding the different particulars of the employee
+//a vector with each position holding the different particulars of the employee
 
     vector<Employee> employees;
     int i=0,j=0;
@@ -60,6 +64,7 @@ int main()
                                 int i;
 
                                 switch (choice){
+//provides the
 
                                     case'1':
                                         {
@@ -232,12 +237,15 @@ int main()
                                 break;
                             }
 //This redirects back to the options meny and the different choices can then be accesed accordingly
+// attribute information can be accessed here.
+	
                         case'6':
                             {
                              char choice=show_menu();
                              while (choice!='0'){
                                 int i;
                                 switch (choice){
+//Used to display the Name of the employee
                                     case'1':
                                         {
                                             for(i=0;i<employees.size()-1;i++){
@@ -338,7 +346,9 @@ int main()
                                         cout << "Invalid input!" << endl;
 
                                 }
-                                choice=show_menu();
+                                choice=
+					
+					_menu();
                              }
                             break;
                             }
