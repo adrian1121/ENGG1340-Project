@@ -183,16 +183,158 @@ int main()
                             {
                                 string nameorid;
                                 cout<<"Name or ID to be edited: ";
-                                cin>>nameorid;
-                                for(i=0;i<employees.size();++i){
-                                    if ((employees[i].name==nameorid)||(employees[i].ID==nameorid)){
-                                        printheading();
-                                        printemployees(employees[i]);
-                                        editprofile(employees[i]);
-                                        break;
+                                cin.ignore();
+                                getline(cin,nameorid);
+                                    for(int i=0;i<employees.size();++i){
+                                        if ((employees[i].name==nameorid)||(employees[i].ID==nameorid)){
+                                                printheading();
+                                                printemployees(employees[i]);
+                                                char element=edit_menu();
+                                                string newdata,olddata,newattribute;
+                                                while (element!='0'){
+                                                    switch (element){
+                                                        case'1':
+                                                            while (true){
+                                                                cout<<"Old: "<<employees[i].name<<endl;
+                                                                cout<<"New: ";
+                                                                cin.ignore();
+                                                                getline(cin,newdata);
+                                                                if (isLetters(newdata)){
+                                                                    cout<<"valid"<<endl;
+                                                                    break;
+                                                                }
+                                                                else
+                                                                    cout<<"invalid"<<endl;
+                                                            }
+                                                            cout<<endl;
+                                                            employees[i].name=newdata;
+                                                            printheading();
+                                                            printemployees(employees[i]);
+                                                            break;
+                                                        case'2':
+                                                            while (true){
+                                                                cout<<"Old: "<<employees[i].ID<<endl;
+                                                                cout<<"New: ";
+                                                                cin.ignore();
+                                                                getline(cin,newdata);
+                                                                if (isNumber(newdata)){
+                                                                    cout<<"valid"<<endl;
+                                                                    break;
+                                                                }
+                                                                else
+                                                                    cout<<"Invalid input!"<<endl;
+                                                            }
+                                                            cout<<endl;
+                                                            employees[i].ID=newdata;
+                                                            printheading();
+                                                            printemployees(employees[i]);
+                                                            break;
+                                                        case'3':
+                                                            while (true){
+                                                                cout<<"Old: "<<employees[i].age<<endl;
+                                                                cout<<"New: ";
+                                                                cin.ignore();
+                                                                getline(cin,newdata);
+                                                                int AgeInt = atoi(newdata.c_str());
+                                                                if (isNumber(newdata)){
+                                                                    if (AgeInt<100&&AgeInt>20){
+                                                                        cout<<"valid"<<endl;
+                                                                        break;
+                                                                    }
+                                                                    else
+                                                                        cout<<"invalid"<<endl;
+                                                                }
+                                                                else
+                                                                    cout<<"invalid"<<endl;
+                                                            }
+                                                            cout<<endl;
+                                                            employees[i].age=newdata;
+                                                            printheading();
+                                                            printemployees(employees[i]);
+                                                            break;
+                                                        case'4':
+                                                            while (true){
+                                                                cout<<"Old: "<<employees[i].role<<endl;
+                                                                cout<<"New: ";
+                                                                cin.ignore();
+                                                                getline(cin,newdata);
+                                                                if (isLetters(newdata)){
+                                                                    cout<<"valid"<<endl;
+                                                                    break;
+                                                                }
+                                                                else
+                                                                    cout<<"invalid"<<endl;
+                                                            }
+                                                            cout<<endl;
+                                                            employees[i].role=newdata;
+                                                            printheading();
+                                                            printemployees(employees[i]);
+                                                            break;
+                                                        case'5':
+                                                            while (true){
+                                                                cout<<"Old: "<<employees[i].salary<<endl;
+                                                                cout<<"New: ";
+                                                                cin.ignore();
+                                                                getline(cin,newdata);
+                                                                if (isNumber(newdata)){
+                                                                    cout<<"valid"<<endl;
+                                                                    break;
+                                                                }
+                                                                else
+                                                                    cout<<"invalid"<<endl;
+                                                            }
+                                                            cout<<endl;
+                                                            employees[i].salary=newdata;
+                                                            printheading();
+                                                            printemployees(employees[i]);
+                                                            break;
+                                                        case'6':
+                                                            while (true){
+                                                                cout<<"Old: "<<employees[i].status<<endl;
+                                                                cout<<"New: ";
+                                                                cin.ignore();
+                                                                getline(cin,newdata);
+                                                                if (isLetters(newdata)|| newdata=="Active" || newdata=="Inactive"){
+                                                                    cout<<"valid"<<endl;
+                                                                    break;
+                                                                }
+                                                                else
+                                                                    cout<<"invalid"<<endl;
+                                                            }
+                                                            cout<<endl;
+                                                            employees[i].status=newdata;
+                                                            printheading();
+                                                            printemployees(employees[i]);
+                                                            break;
+                                                        case'7':
+                                                            while (true){
+                                                                cout<<"Old: "<<employees[i].attribute<<endl;
+                                                                    cout<<"New: ";
+                                                                    cin.ignore();
+                                                                    getline(cin,newdata);
+                                                                    if (isLetters(newdata)){
+                                                                        cout<<"valid"<<endl;
+                                                                        break;
+                                                                    }
+                                                                    else
+                                                                        cout<<"invalid"<<endl;
+                                                            }
+                                                            olddata=employees[i].attribute;
+                                                            newattribute=olddata+", "+newdata;
+                                                            employees[i].attribute=newattribute;
+                                                            printheading();
+                                                            printemployees(employees[i]);
+                                                            break;
+                                                        default:
+                                                            cout<<"Invalid Input!"<<endl;
+                                                    }
+                                                    element=edit_menu();
+                                                }
+                                        }
                                     }
-                                }
-                                break;
+
+
+                                    break;
 
                              }
 //The case 4 creates a new employee details
