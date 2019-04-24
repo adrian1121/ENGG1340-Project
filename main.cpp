@@ -368,14 +368,20 @@ int main()
                         case'5':
                             {
                                 string nameorid;
-                                cin>>nameorid;
+                                int check=0;
+                                cout<<"Name or ID to be fired: "<<endl;
+                                cin.ignore();
+                                getline(cin,nameorid);
                                 for(i=0;i<employees.size();++i){
                                     if ((employees[i].name==nameorid)||(employees[i].ID==nameorid)){
                                         cout<<employees[i].name<<" "<<employees[i].ID<<" has been fired!";
                                         employees[i].status="Fired!";
+                                        check++;
                                         break;
                                     }
                                 }
+                                if (check==0)
+                                    cout<<"No result found!"<<endl;
                                 break;
                             }
 //This redirects back to the options meny and the different choices can then be accesed accordingly
