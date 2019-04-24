@@ -562,46 +562,7 @@ int main()
     }
 }
 
-char edit_menu()
-{
-	char choice;
 
-	// print selection menu
-	cout << "********************************" << endl;
-	cout << "* Welcome to EDIT Menu *" << endl;
-	cout << "********************************" << endl;
-	cout << "1.Name" << endl;
-	cout << "2.Employee ID" << endl;
-	cout << "3.Age" << endl;
-	cout << "4.Role" << endl;
-	cout << "5.Salary" << endl;
-	cout << "6.Status" << endl;
-	cout << "7.Attributes" << endl;
-	cout << "0. Quit. " << endl;
-	cout << "Please enter your choice: ";
-
-	// read user selection
-	cin >> choice;
-	cout << endl;
-
-	return choice;
-}
-char main_menu()
-{
-	char choice;
-
-	// print selection menu
-	cout << "********************************"<< endl;
-	cout << "* Welcome *" << endl;
-	cout << "********************************" << endl;
-	cout << "1. Menu" << endl;
-	cout << "2. Instruction" << endl;
-	cout << "3. Quit. " << endl;
-	cout << "Please enter your choice: ";
-
-	// read user selection
-	cin >> choice;
-	cout << endl;
 
 	return choice;
 }
