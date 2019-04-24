@@ -561,53 +561,7 @@ int main()
         }
     }
 }
-char selection_menu()
-{
-	char choice;
 
-	// The welcome menu is printed providing the various options that can be executed.
-	cout << "********************************" << endl;
-	cout << "* Welcome to Staff Manager *" << endl;
-	cout << "********************************" << endl;
-	cout << "1.Search" << endl;
-	cout << "2.Delete" << endl;
-	cout << "3.Edit" << endl;
-	cout << "4.Create" << endl;
-	cout << "5.Fire" << endl;
-	cout << "6.Show" << endl;
-	cout << "0.Quit. " << endl;
-	cout << "Please enter your choice: ";
-
-	// Based on the use input the function return the choice to perform the required tasks accordingly.
-	cin >> choice;
-	cout << endl;
-
-	return choice;
-}
-
-char employee_menu()
-{
-	char choice;
-
-	// print selection menu
-	cout << "********************************" << endl;
-	cout << "* Welcome to Employee Menu *" << endl;
-	cout << "********************************" << endl;
-	cout << "1.Employee ID" << endl;
-	cout << "2.Name" << endl;
-	cout << "3.Age" << endl;
-	cout << "4.Role" << endl;
-	cout << "5.Salary" << endl;
-	cout << "6.Status" << endl;
-	cout << "0. Quit. " << endl;
-	cout << "Please enter your choice: ";
-
-	// read user selection
-	cin >> choice;
-	cout << endl;
-
-	return choice;
-}
 char edit_menu()
 {
 	char choice;
