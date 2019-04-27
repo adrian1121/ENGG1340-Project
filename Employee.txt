@@ -1,0 +1,2 @@
+Foo,67,22,e,25,Fired!,Good-NULL,NULL
+Lo,34,22,e,25,Fired!,NULL,NULL
