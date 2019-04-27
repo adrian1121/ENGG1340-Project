@@ -39,7 +39,7 @@ int main()
 
 	  bool check = true, checksearch= true;
     CheckEmployeeFile();
-    //ReadCheckinCheckouttimefromfile();
+    ReadCheckinCheckouttimefromfile();
 
     while (check){
         char choice = main_menu();
@@ -176,31 +176,39 @@ int main()
         }
     }
 }
-/*
 void ReadCheckinCheckouttimefromfile(){
-  int l=0;
   for (int i=0;i<employees.size();i++){
     string fileName = employees[i].ID + filenameA;
     if (filexist(fileName.c_str())){
+      int l=0;
       ifstream fin;
       string input,array[31];
       fin.open(fileName.c_str());
-      while (getline(fin,input)){
+      for (int n = 0; n < 31; n ++){
+          getline(fin,input);
+          if (input == "")
+            break;
           employees[i].checkin[l]=input;
           l=l+1;
       }
       fin.close();
     }
+
     string fileName2 = employees[i].ID+filenameB;
     if (filexist(fileName2.c_str())){
+      int l=0;
       ifstream fin;
       string input,array[31];
       fin.open(fileName2.c_str());
-      while (getline(fin,input)){
+      for (int n = 0; n < 31; n ++){
+            getline(fin,input);
+            if (input == "")
+              break;
             employees[i].checkout[l]=input;
             l=l+1;
       }
+
       fin.close();
     }
   }
-}*/
+}
