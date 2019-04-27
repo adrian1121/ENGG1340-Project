@@ -176,6 +176,10 @@ int main()
         }
     }
 }
+/*
+ * Check if the Checkin & Checkout File of the employee exist anot
+ * If exist, Read all the data from the file and insert into the vector in the program.
+ */
 void ReadCheckinCheckouttimefromfile(){
   for (int i=0;i<employees.size();i++){
     string fileName = employees[i].ID + filenameA;
