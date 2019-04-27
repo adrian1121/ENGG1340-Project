@@ -49,6 +49,10 @@ void printheading(){
     cout << setw(15) << "Salary "<<setw(15)<<"Status ";
     cout<<setw(20)<<"Attributes"<<setw(15)<<"Rating"<<endl;
 }
+/*
+ * Check whether the Employee File exist 
+ * Read data from the file and insert to the vector of the program
+ */
 void CheckEmployeeFile(){
   ifstream fin;
   string input;
