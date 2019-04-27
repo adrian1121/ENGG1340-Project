@@ -1,6 +1,30 @@
 # STAFF MANAGEMENT SYSTEM GROUP 68
 ## Problem Statement
   Recently, the deteriorating attendance rate of the companies has been a huge issue. Some employees have been showing up late for work and leaving early before the end of work hours. This is not fair for the other responsible and discipline employees as there is no. standardization within the company. To cope with this issue, the companies should implement a computer program which can take into account the attendance of each employee and the performance rating of each employee measured through varied attributes and stored in the system for reference.
+## Prequisites
+The program is a C++ 11 standard program. It must run in an appropriate C++ 11 Standard compiler.
+## Build
+Linux:
+```sh
+make main
+```
+Windows:
+```sh
+make main
+```
+or
+```sh
+mingw32-make main
+```
+## Run the program
+Linux:
+```sh
+./main
+```
+Windows:
+```sh
+main.exe
+```
 ## What the project does
 This program manages the employee data base for a small company. It encompasses basic features of handling attributes of employees such as employee ID, name, age, role, and salary. Additionally, it helps in managing operations such as adding and deleting new and existing employee information from user input. Also, gives the option of defining further required attributes for the convenience of the company. In order to improve management efficiency the program also includes attendance (Check-in and check-out time) and employee ratings to analyse and gather data for each employee making it easier to make decisions in the company.
 ## Why the project is useful
