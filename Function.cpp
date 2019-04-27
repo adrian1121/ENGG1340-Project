@@ -395,9 +395,14 @@ while (choice!='8'){
             int diff_minutes;
             int total_time_raw;
             for( i =0;i <employees.size();i++){
+                employees[i].total_time = 0;
                 for(int j=0;j<31;j++){
+                    if (employees[i].checkin[j] == "") {
+                      break;
+                    }
                     check_in_hour= atoi(((employees[i].checkin[j]).substr(0,2)).c_str());
                     check_out_hour= atoi(((employees[i].checkout[j]).substr(0,2)).c_str());
+                    //cout << check_in_hour << " " << check_out_hour << " " << check_out_hour - check_in_hour << endl;
                     check_in_minutes= atoi(((employees[i].checkin[j]).substr(2,2)).c_str());
                     check_out_minutes=atoi(((employees[i].checkout[j]).substr(2,2)).c_str());
                     if (check_in_minutes > check_out_minutes){
@@ -408,39 +413,39 @@ while (choice!='8'){
                         diff_minutes= check_out_minutes - check_in_minutes;
                     }
                     total_time_raw=((check_out_hour-check_in_hour)*60) + diff_minutes;
+                    employees[i].total_time += total_time_raw;
                 }
-                employees[i].total_time= total_time_raw;
             }
             for( i =0;i<employees.size();i++){
                 if(employees[i].total_time>= 18600){
-                    employees[i].rating = 10;
+                    employees[i].rating = "9";
                 }
                 if(employees[i].total_time<18600 && employees[i].total_time >=16740){
-                    employees[i].rating = 9;
+                    employees[i].rating = "8";
                 }
                 if(employees[i].total_time <16700 && employees[i].total_time >=14880){
-                    employees[i].rating = 8;
+                    employees[i].rating = "7";
                 }
                 if(employees[i].total_time <14880 && employees[i].total_time >=13020){
-                    employees[i].rating = 7;
+                    employees[i].rating = "6";
                 }
                 if(employees[i].total_time < 13020 && employees[i].total_time >=11160){
-                    employees[i].rating = 6;
+                    employees[i].rating = "5";
                 }
                 if(employees[i].total_time<11160 && employees[i].total_time >=9300){
-                    employees[i].rating = 5;
+                    employees[i].rating = "4";
                 }
                 if(employees[i].total_time<9300 && employees[i].total_time >=7440){
-                    employees[i].rating = 4;
+                    employees[i].rating = "3";
                 }
                 if(employees[i].total_time <7440 && employees[i].total_time >=5580){
-                    employees[i].rating = 3;
+                    employees[i].rating = "2";
                 }
                 if(employees[i].total_time <5580 && employees[i].total_time>=3720){
-                    employees[i].rating = 2;
+                    employees[i].rating = "1";
                 }
                 if(employees[i].total_time <3720 ){
-                    employees[i].rating = 1;
+                    employees[i].rating = "0";
                 }
             }
             int max=employees[0].total_time;
