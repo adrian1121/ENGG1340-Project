@@ -113,7 +113,7 @@ int main()
             cout << "4.Create - To add new employee details to the database" << endl;
             cout << "5.Fire - Used to change status of employee to fired" << endl;
             cout << "6.Show - Leads us to a new menu called 'Employee menu' " << endl;
-            cout << "7.Checktime - Input Checkin & Checkout time for 31 days for specific employee. " << endl;
+            cout << "7.Checktime - Input Checkin & Checkout time for 31 days for specific employee. (The difference between the time in a month will be calculated and the rating will based on the difference) " << endl;
             cout << "8. Quit- Returns back to the main_menu"<<endl;
             cout<<"Search Function"<<endl;
             cout << ""<< endl;
@@ -158,7 +158,7 @@ int main()
             cout << "4.Role - Shows the Role of the employee alphabetically" << endl;
             cout << "5.Salary - Shows the salary of the employee numerically" << endl;
             cout << "6.Status - Shows the status of the employee alphabetically" << endl;
-            cout << "7.Rating - Shows the attributes of an employee numerically" << endl;
+            cout << "7.Rating - Shows the Rating of an employee numerically (This rating system is based on the checkin and checkout time of the employee) " << endl;
             cout << "8. Quit. - Returns back to orginal menu " << endl;
             cout<<""<<endl;
             cout<<"Checktime function"<<endl;
