@@ -126,7 +126,7 @@ int main()
             cout << "3.Age - Displays the age of employee" << endl;
             cout << "4.Role - Displays the role of the employee in the company" << endl;
             cout << "5.Salary - Displays the salary of the employee" << endl;
-            cout << "6. Quit. - Returns back to the menu " << endl;
+            cout << "6. Quit. - Returns back to the main_menu " << endl;
             cout << ""<< endl;
             cout<<"Edit Function"<<endl;
             cout<<"Enter the ID or Name of the employee so that the information can be edited."<<endl;
@@ -141,7 +141,7 @@ int main()
             cout << "5.Salary - Edits the salary of the employee" << endl;
             cout << "6.Status - Edits the status of the employee" << endl;
             cout << "7.Attributes - Edits the attributes of an employee" << endl;
-            cout << "8. Quit. - Returns back to orginal menu " << endl;
+            cout << "8. Quit. - Returns back to main_menu " << endl;
             cout<<""<<endl;
             cout<<"Fire function"<<endl;
             cout<<"Enter the ID or Name of the employee to be fired so that the status is written Fired! "<<endl;
@@ -159,7 +159,7 @@ int main()
             cout << "5.Salary - Shows the salary of the employee numerically" << endl;
             cout << "6.Status - Shows the status of the employee alphabetically" << endl;
             cout << "7.Rating - Shows the Rating of an employee numerically (This rating system is based on the checkin and checkout time of the employee) " << endl;
-            cout << "8. Quit. - Returns back to orginal menu " << endl;
+            cout << "8. Quit. - Returns back to main_menu " << endl;
             cout<<""<<endl;
             cout<<"Checktime function"<<endl;
             cout<<"Input the Checkin & Checkout time of the specific employee in a particular month and store it in a file and the vector!"<<endl;
