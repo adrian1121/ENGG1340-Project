@@ -27,12 +27,14 @@ main.exe
 ```
 ## File Input and Output
 Employee.txt - Information of each employee
+
 Employee.txt:
 ```sh
 <Employee 1 name>,<Employee 1 ID>,<Employee 1 age>,<Employee 1 role>,<Employee 1 salaray>,<Employee 1 status>,<Employee 1 attributes>,<Employee 1 rating>
 <Employee 2 name>,<Employee 2 ID>,<Employee 2 age>,<Employee 2 role>,<Employee 2 salaray>,<Employee 2 status>,<Employee 2 attributes>,<Employee 2 rating>
 ```
 \<Employee ID\>checkintime.txt - Check in time of employee with the ID
+
 \<Employee ID\>checkintime.txt:
 ```sh
 <Day 1 check in time>
@@ -42,6 +44,7 @@ Employee.txt:
 <Day 31 check in time>
 ```
 \<Employee ID\>checkouttime.txt - Check out time of employee with the ID
+
 \<Employee ID\>checkouttime.txt:
 ```sh
 <Day 1 check out time>
